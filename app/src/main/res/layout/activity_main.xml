@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.protocolhelper.ui.main.viewmodel.MainViewModel" />
+    </data>
+
+    <!--<TableLayout-->
+    <!--android:id="@+id/tl"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".MainActivity"-->
+    <!--android:background="@android:color/white"-->
+    <!--android:padding="16dp">-->
+
+    <!--<TableRow-->
+    <!--android:id="@+id/tr_header"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:padding="5dp"-->
+    <!--&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_product"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Book"-->
+    <!--android:paddingRight="10dp"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_author"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Author"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_quantity"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Quantity"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_unit_price"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Unit Price"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_price"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Price"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--/>-->
+    <!--</TableRow>-->
+    <!--<TableRow-->
+    <!--android:id="@+id/tr_item_1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:padding="5dp"-->
+    <!--&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_product_item_1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Hello, Android, 4th Edition"-->
+    <!--android:paddingRight="10dp"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_author_item_1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Ed Burnette"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_quantity_item_1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="2"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:layout_gravity="right"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_unit_price_item_1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="$36.00"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:layout_gravity="right"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_price_item_1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="$72.00"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:layout_gravity="right"-->
+    <!--/>-->
+    <!--</TableRow>-->
+    <!--<TableRow-->
+    <!--android:id="@+id/tr_item_2"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:padding="5dp"-->
+    <!--&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_product_item_2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="High Performance Android Apps"-->
+    <!--android:paddingRight="10dp"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_author_item_2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Doug Sillars"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_quantity_item_2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="3"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:layout_gravity="right"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_unit_price_item_2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="$44.99"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:layout_gravity="right"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_price_item_2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="$134.97"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:layout_gravity="right"-->
+    <!--/>-->
+    <!--</TableRow>-->
+    <!--<TableRow-->
+    <!--android:id="@+id/tr_total"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:padding="5dp"-->
+    <!--&gt;-->
+    <!--&lt;!&ndash; layout_span is table column span &ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/tv_total_price"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Total = $206.97"-->
+    <!--android:layout_span="5"-->
+    <!--android:layout_gravity="right"-->
+    <!--android:textStyle="italic"-->
+    <!--/>-->
+    <!--</TableRow>-->
+    <!--</TableLayout>-->
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/add_instrument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="добавити прилад(інструмент)"
+            android:onClick="@{(view) -> viewModel.createInstrument()}"
+            app:layout_constraintBottom_toTopOf="@+id/create_protocol"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <Button
+            android:id="@+id/create_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Створити протокол"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_instrument" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{viewModel.item}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="tim12" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

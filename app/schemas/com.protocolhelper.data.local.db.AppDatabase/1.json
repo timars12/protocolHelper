@@ -1,0 +1,81 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "12fa29e4ab23ab33b10695ab3572dc97",
+    "entities": [
+      {
+        "tableName": "Instrument",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`instrument_id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT, `name_instrument` TEXT, `way_of_protection` TEXT, `nominal_amperage` TEXT, `estimated_minimum_amperage` TEXT, `max_resistance` TEXT, `measured_resistance` TEXT, `notes` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "instrumentId",
+            "columnName": "instrument_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "instrument.nameInstrument",
+            "columnName": "name_instrument",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "instrument.wayOfProtection",
+            "columnName": "way_of_protection",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "instrument.nominalAmperage",
+            "columnName": "nominal_amperage",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "instrument.estimatedMinimumAmperage",
+            "columnName": "estimated_minimum_amperage",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "instrument.maxResistance",
+            "columnName": "max_resistance",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "instrument.measuredResistance",
+            "columnName": "measured_resistance",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "instrument.notes",
+            "columnName": "notes",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "instrument_id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"12fa29e4ab23ab33b10695ab3572dc97\")"
+    ]
+  }
+}
