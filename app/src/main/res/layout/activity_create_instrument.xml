@@ -42,6 +42,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:hint="Name"
+            android:text="@={viewModel.name}"
             android:inputType="textPersonName" />
 
         <TextView
@@ -61,6 +62,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:text="@={viewModel.methodForSave}"
             android:hint="Name"
             android:inputType="textPersonName" />
 
@@ -82,7 +84,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:hint="Name"
-            android:inputType="textPersonName" />
+            android:text="@={viewModel.estimatedMinimumAmperage}"
+            android:inputType="numberDecimal" />
 
         <TextView
             android:id="@+id/tv_max_resistance"
@@ -101,8 +104,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:text="@={viewModel.maxResistance}"
             android:hint="Name"
-            android:inputType="textPersonName" />
+            android:inputType="numberDecimal" />
 
     </RelativeLayout>
 </layout>

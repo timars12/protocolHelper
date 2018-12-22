@@ -40,7 +40,7 @@ public class CreateInstrumentActivity extends BaseActivity<ActivityCreateInstrum
 
         ActivityCreateInstrumentBinding mBinding = getViewDataBinding();
 
-        Toolbar toolbar = (Toolbar) mBinding.toolbar;
+        Toolbar toolbar = mBinding.toolbar;
         setSupportActionBar(toolbar);
         ActionBar supportActionBar = getSupportActionBar();
         assert supportActionBar != null;
@@ -70,7 +70,7 @@ public class CreateInstrumentActivity extends BaseActivity<ActivityCreateInstrum
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-//        mViewModel.createPost();
+        viewModel.saveInstrument();
         return super.onOptionsItemSelected(item);
     }
 }

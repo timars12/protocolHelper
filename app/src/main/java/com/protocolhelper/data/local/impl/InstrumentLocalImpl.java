@@ -18,8 +18,6 @@ public class InstrumentLocalImpl implements InstrumentLocalStorage {
 
     @Override
     public void saveInstrument(Instrument instrument) {
-//        Instrument aa = new Instrument();
-//
-//        mAppDatabase.instrumentDao().insert(aa);
+        mAppDatabase.instrumentDao().insert(instrument);
     }
 }

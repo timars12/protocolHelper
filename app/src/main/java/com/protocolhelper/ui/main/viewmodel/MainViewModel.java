@@ -16,7 +16,7 @@ public class MainViewModel extends BaseViewModel {
 
     @Inject
     public MainViewModel(InstrumentLocalStorage instrumentLocalStorage){
-        instrumentLocalStorage.saveInstrument(null);
+//        instrumentLocalStorage.saveInstrument(null);
     }
 
     public void createInstrument(){

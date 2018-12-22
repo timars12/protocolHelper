@@ -7,8 +7,12 @@ import android.content.Context;
 
 import com.protocolhelper.data.local.db.dao.InstrumentDao;
 import com.protocolhelper.data.model.Instrument;
+import com.protocolhelper.data.model.TypeWork;
+import com.protocolhelper.data.model.Work;
+import com.protocolhelper.data.model.WorkItem;
+import com.protocolhelper.data.model.WorkProtocol;
 
-@Database(entities = {Instrument.class}, version = 1)
+@Database(entities = {Instrument.class, WorkProtocol.class, TypeWork.class, Work.class, WorkItem.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase INSTANCE;
