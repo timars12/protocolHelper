@@ -8,7 +8,7 @@ import com.android.databinding.library.baseAdapters.BR;
 import com.protocolhelper.R;
 import com.protocolhelper.ui.base.BaseActivity;
 import com.protocolhelper.ui.base.BaseViewModel;
-//import com.protocolhelper.ui.createInstrument.CreateInstrumentActivity;
+import com.protocolhelper.ui.createInstrument.CreateInstrumentActivity;
 import com.protocolhelper.ui.main.viewmodel.MainViewModel;
 
 import javax.inject.Inject;
@@ -37,13 +37,13 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        Intent intentCreateInstrument = new Intent(this, CreateInstrumentActivity.class);
+        Intent intentCreateInstrument = new Intent(this, CreateInstrumentActivity.class);
 
         viewModel.isOpenCreateInstrument.addOnPropertyChangedCallback(new Observable.OnPropertyChangedCallback() {
             @Override
             public void onPropertyChanged(Observable sender, int propertyId) {
                 if(viewModel.isOpenCreateInstrument.get()){
-//                    startActivity(intentCreateInstrument);
+                    startActivity(intentCreateInstrument);
                     viewModel.isOpenCreateInstrument.set(false);
                 }
             }
